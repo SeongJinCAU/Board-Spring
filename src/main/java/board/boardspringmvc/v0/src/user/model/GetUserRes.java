@@ -7,10 +7,16 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class PatchUserReq {
-
+public class GetUserRes {
     private String userName;
     private String introduce;
     private String phone;
     private String email;
+
+    public GetUserRes(User user){
+        this.userName = user.getUserName();
+        this.introduce = user.getIntroduce();
+        this.phone = user.getPhone();
+        this.email = user.getEmail();
+    }
 }

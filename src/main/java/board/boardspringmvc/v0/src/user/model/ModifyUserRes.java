@@ -7,10 +7,17 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class PatchUserRes {
+public class ModifyUserRes {
 
     private String userName;
     private String introduce;
     private String phone;
     private String email;
+
+    public ModifyUserRes(User user){
+        this.userName = user.getUserName();
+        this.introduce = user.getIntroduce();
+        this.phone = user.getPhone();
+        this.email = user.getEmail();
+    }
 }
